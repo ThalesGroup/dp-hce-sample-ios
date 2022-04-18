@@ -1,0 +1,130 @@
+/*
+ MIT License
+ 
+ Copyright (c) 2021 Thales DIS
+ 
+ Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
+ documentation files (the "Software"), to deal in the Software without restriction, including without limitation the
+ rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to
+ permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ 
+ The above copyright notice and this permission notice shall be included in all copies or substantial portions of the
+ Software.
+ 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+ WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ 
+ */
+
+//Errors
+"sdk_helper_already_init"="SDK Helper is already initialized.";
+"mg_error_sdk_already_init"="MG SDK is already initialized.";
+"push_provider_missing"="FCM service isn't available.";
+"push_received_sdk_not_initialized"="Trying to process incoming message without SDK being initialized.";
+"register_fcm"="Not granted";
+"cards_error"="Device not suitable for this application";
+"enrollment_eligibility_error"="Enrollment unkown eligibility operation";
+"enrollment_eligibility_hardware_support_error"="Device does not have hardware support for wallet.";
+"enrollment_eligibility_biometric_error"="Please enable biometric authentication to use wallet.";
+"push_token_error"="Application can't get notification token.";
+"app_code"="App Code isn't configure";
+
+
+//InitState
+"card_count"="Card count:";
+
+//Enrollment
+"idv_method_prefix"="Authentication Code via ";
+
+//DataPersistance
+"empty_pan_expiration"="1225";
+
+//CardListHelper
+
+//CardListView
+"title_cardlist"="Card List";
+"button_add_card"="Add";
+"title_cardlist_empty_cards"="Your Wallet is empty, please\n add new card";
+"status_information"="Status:";
+"default_information"="Is Default:";
+"button_activate_action"="ACTIVATE";
+"button_default_action"="SET DEFAULT";
+"button_payment_action"="PAYMENT";
+"button_resume_action"="RESUME";
+"button_suspend_action"="SUSPEND";
+"button_delete_action"="DELETE";
+"default_information_yes"="YES";
+"default_information_no"="NO";
+"digitalized_card_state_active"="ACTIVE";
+"digitalized_card_state_suspended"="SUSPENDED";
+"digitalized_card_state_retired"="RETIRED";
+"digitalized_card_state_unkown"="UNKNOWN";
+
+//CardFrontView
+"title_cvv"="SECURITY CODE";
+"title_valid_thru"="VALID THRU";
+
+//CardEnrollmentView
+"title_enroll_card"="Enter Card";
+"button_enroll_card"="Enroll card";
+"button_enroll_cancel_flow"="Cancel";
+"progress_title_enrolling_card"="Enrolling card";
+"progress_title_continue_enrolling_card"="Continue enrolling card";
+
+//CardDetailView
+"title_card_detail"="Card Detail";
+"button_close"="Close";
+"button_pay"="Pay";
+"button_suspend"="Suspend Card";
+"button_resume"="Resume Card";
+"button_delete"="Delete Card";
+"button_set_default"="Set Default";
+"button_unset_default"="Unset Default";
+
+//CardInformationView
+"hint_card_number"="Card number";
+"placeholder_card_number"="4123450131003312";
+"error_card_number"="Please enter card number";
+"hint_expiration"="Expiration date";
+"placeholder_expiration"="0125";
+"error_expiration"="Please enter expiration date";
+"hint_cvv"="Security code";
+"placeholder_cvv"="123";
+"error_cvv"="Please enter security code";
+
+//TermsAndConditionsView
+"title_tac"="Terms & Conditions";
+"button_agree_tac"="Agree";
+"button_disagree_tac"="Disagree";
+"progress_title_termsandconditions"="Accepting Terms&Conditions";
+
+//IDVSelectionView
+"title_idv_selction"="Select your authentication method";
+"error_idv_selction"="Any IDV method isn't available for type of card";
+"button_continue_idv_selction"="Continue";
+"button_cancel_idv_selction"="Cancel";
+"progress_title_idv_selction"="Selecting IDV";
+
+//IDVCodeView
+"title_idv_code"="Enter your authentication code";
+"hint_idv_code"="Authentication Code";
+"button_continue_idv_code"="Submit";
+"button_cancel_idv_code"="Cancel";
+"progress_title_idv_code"="Submiting authenctication code";
+
+//SplashView
+"progress_title_splash"="Initializing Application";
+
+//PaymentView
+"title_payment"="Payment";
+"title_amount_payment"="Amount €";
+"hint_amount_payment"="Amount";
+"button_generate_payment"="Generate QR";
+"button_close_payment"="Close";
+"payment_error_title_default_card"="Payment error";
+"payment_error_description_card_no_default_card"="Default card isn't set";
+"payment_error_description_card_wrong_default_card"="Wrong default card";
+"payment_authentication"="Authenticate to pay.";
+
