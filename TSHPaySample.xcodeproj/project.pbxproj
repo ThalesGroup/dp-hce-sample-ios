@@ -3,87 +3,46 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07A9D1F127F8386C00A004F7 /* IDVSelectionModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A9D1F027F8386C00A004F7 /* IDVSelectionModifier.swift */; };
-		910E8CF726EA03D900F2A0F7 /* NSError+ErrorForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910E8CF626EA03D900F2A0F7 /* NSError+ErrorForm.swift */; };
-		910FA758270EECC4008FFC4C /* CardInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910FA757270EECC4008FFC4C /* CardInformationView.swift */; };
-		910FA75A270F0DB8008FFC4C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910FA759270F0DB8008FFC4C /* LoadingView.swift */; };
-		910FA75C270F25AC008FFC4C /* TermsAndConditionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910FA75B270F25AC008FFC4C /* TermsAndConditionsView.swift */; };
-		910FA76027104810008FFC4C /* IDVSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910FA75F27104810008FFC4C /* IDVSelectionView.swift */; };
-		910FA76227143231008FFC4C /* RadioButtonGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910FA76127143230008FFC4C /* RadioButtonGroupView.swift */; };
-		910FA76427143294008FFC4C /* RadioButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910FA76327143294008FFC4C /* RadioButtonView.swift */; };
-		910FA76627143A47008FFC4C /* IDVCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910FA76527143A47008FFC4C /* IDVCodeView.swift */; };
-		911ED1AB26B1816F00B9BFD3 /* RAGESConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 911ED1AA26B1816F00B9BFD3 /* RAGESConfig.plist */; };
-		911ED1AD26B1835700B9BFD3 /* gemcbp.plist in Resources */ = {isa = PBXBuildFile; fileRef = 911ED1AC26B1835700B9BFD3 /* gemcbp.plist */; };
-		911ED1B326B80BFB00B9BFD3 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 911ED1B126B80A6600B9BFD3 /* libsqlite3.tbd */; };
-		911ED1B426B80C1900B9BFD3 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 911ED1B226B80A7A00B9BFD3 /* libc++.tbd */; };
-		911ED1B626B80CE100B9BFD3 /* TSHPaySample.plist in Resources */ = {isa = PBXBuildFile; fileRef = 911ED1B526B80CE100B9BFD3 /* TSHPaySample.plist */; };
-		911ED1B826B82D5E00B9BFD3 /* CardListHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911ED1B726B82D5E00B9BFD3 /* CardListHelper.swift */; };
-		91249DA527BBAA230024BEB6 /* CardHorizontalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91249DA427BBAA220024BEB6 /* CardHorizontalListView.swift */; };
-		91281D7526A1AF600008AC98 /* TshInitState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91281D7426A1AF600008AC98 /* TshInitState.swift */; };
-		91281D7726A1AFDB0008AC98 /* InternalNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91281D7626A1AFDB0008AC98 /* InternalNotifications.swift */; };
-		91281D7926A1AFF40008AC98 /* TshEnrollment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91281D7826A1AFF40008AC98 /* TshEnrollment.swift */; };
-		91281D7B26A1AFFF0008AC98 /* TshEnrollmentState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91281D7A26A1AFFF0008AC98 /* TshEnrollmentState.swift */; };
-		91281D7D26A1B02C0008AC98 /* AppLogerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91281D7C26A1B02C0008AC98 /* AppLogerHelper.swift */; };
-		91281D7F26A1B0460008AC98 /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91281D7E26A1B0460008AC98 /* PushNotification.swift */; };
-		913722BD2758B1EF00ED3EB9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 913722BF2758B1EF00ED3EB9 /* Localizable.strings */; };
-		913D5DED2727EFFF000AD019 /* PlaceHolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913D5DEC2727EFFF000AD019 /* PlaceHolderView.swift */; };
-		9148E44126CFB5BA00EAC98F /* String+Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9148E44026CFB5BA00EAC98F /* String+Padding.swift */; };
-		917F8A4127C7CB79008C1DF4 /* FcmCardOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917F8A4027C7CB79008C1DF4 /* FcmCardOperation.swift */; };
-		9183E0DD26A5C28E008A6DCF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9183E0DC26A5C28D008A6DCF /* GoogleService-Info.plist */; };
-		9183E0E126A6ECB4008A6DCF /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = 9183E0E026A6ECB4008A6DCF /* FirebaseInstallations */; };
-		9183E0E326A6EE03008A6DCF /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 9183E0E226A6EE03008A6DCF /* FirebaseMessaging */; };
-		9183E10A26A849C2008A6DCF /* ObjCSwift.m in Sources */ = {isa = PBXBuildFile; fileRef = 9183E10926A849C2008A6DCF /* ObjCSwift.m */; };
-		9188BD3E26A17D790046639D /* TSHPaySampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9188BD3D26A17D790046639D /* TSHPaySampleApp.swift */; };
-		9188BD4226A17D7A0046639D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9188BD4126A17D7A0046639D /* Assets.xcassets */; };
-		9188BD4526A17D7A0046639D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9188BD4426A17D7A0046639D /* Preview Assets.xcassets */; };
-		9188BD5226A1869E0046639D /* SdkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9188BD5126A1869E0046639D /* SdkHelper.swift */; };
-		9188BD5426A187990046639D /* TshPush.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9188BD5326A187990046639D /* TshPush.swift */; };
-		9188BD5626A18A560046639D /* FcmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9188BD5526A18A560046639D /* FcmService.swift */; };
-		9188BD5826A18C390046639D /* SdkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9188BD5726A18C390046639D /* SdkConstants.swift */; };
-		9188BD5A26A1A1320046639D /* TshInitBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9188BD5926A1A1320046639D /* TshInitBase.swift */; };
-		9189130D26DFA6EC00E1E240 /* ViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9189130C26DFA6EC00E1E240 /* ViewModifier.swift */; };
-		91A996B42796DE5200C9E621 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C6FCFF272FE19700686616 /* Security.framework */; };
-		91A996B92796E70B00C9E621 /* SAMKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A996B82796E0B500C9E621 /* SAMKeychain.m */; };
-		91A996BA2796E70F00C9E621 /* SAMKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A996B72796E0B500C9E621 /* SAMKeychainQuery.m */; };
-		91B48863270B258C0000D400 /* CardFrontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B48862270B258C0000D400 /* CardFrontView.swift */; };
-		91B48867270B40D60000D400 /* CardTransactionHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B48866270B40D60000D400 /* CardTransactionHistoryView.swift */; };
-		91B48869270C82780000D400 /* CardEnrollmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B48868270C82780000D400 /* CardEnrollmentView.swift */; };
-		91BF214727561AF900F9EF8E /* DataPersistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BF214627561AF900F9EF8E /* DataPersistance.swift */; };
-		91C6FD122732F78D00686616 /* CardEnrollmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C6FD112732F78D00686616 /* CardEnrollmentViewModel.swift */; };
-		91C6FD142732FF1600686616 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C6FD132732FF1600686616 /* NotificationView.swift */; };
-		91CE48862733C23700CC2E92 /* NotificationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CE48852733C23700CC2E92 /* NotificationData.swift */; };
-		F414DD03274FB7AF008EFD02 /* TSHPaySDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F414DD02274FB7AF008EFD02 /* TSHPaySDK.xcframework */; };
-		F414DD04274FB7AF008EFD02 /* TSHPaySDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F414DD02274FB7AF008EFD02 /* TSHPaySDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F421A69F272965BF0023C5AF /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F421A69C272965BE0023C5AF /* Card.swift */; };
-		F421A6A0272965BF0023C5AF /* CardDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F421A69D272965BE0023C5AF /* CardDetail.swift */; };
-		F421A6A1272965BF0023C5AF /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F421A69E272965BF0023C5AF /* Transaction.swift */; };
-		F421A6A5272965CD0023C5AF /* CardListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F421A6A2272965CD0023C5AF /* CardListViewModel.swift */; };
-		F421A6A7272965CD0023C5AF /* CardTransactionHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F421A6A4272965CD0023C5AF /* CardTransactionHistoryViewModel.swift */; };
-		F42649E92731563C0060A3FC /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42649E82731563C0060A3FC /* RootView.swift */; };
-		F42649EB273156770060A3FC /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42649EA273156770060A3FC /* ViewRouter.swift */; };
-		F42649ED2731648F0060A3FC /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42649EC2731648F0060A3FC /* SplashView.swift */; };
-		F42649F1273180F30060A3FC /* SdkStateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42649F0273180F30060A3FC /* SdkStateViewModel.swift */; };
-		F4381112273D41E600B5CF29 /* PaymentHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4381111273D41E600B5CF29 /* PaymentHelper.swift */; };
-		F4381114273EAA9700B5CF29 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4381113273EAA9700B5CF29 /* BaseViewModel.swift */; };
-		F438111627427DA600B5CF29 /* CardArtHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F438111527427DA600B5CF29 /* CardArtHelper.swift */; };
-		F45A32C7273C069600F20DBB /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45A32C6273C069600F20DBB /* PaymentView.swift */; };
-		F45A32C9273C153100F20DBB /* View+HideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45A32C8273C153100F20DBB /* View+HideKeyboard.swift */; };
-		F45A32CB273C229100F20DBB /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45A32CA273C229100F20DBB /* PaymentViewModel.swift */; };
-		F4AB135F273958D800FCEBB1 /* TransactionHistoryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB135E273958D800FCEBB1 /* TransactionHistoryHelper.swift */; };
+		1246A697DFDC445C2327AA12 /* Pods_TSHPaySample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3277888DC1DBF875461008 /* Pods_TSHPaySample.framework */; };
+		3E20FFB52C590AEE003DEB47 /* TSHPaySampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E20FFB42C590AEE003DEB47 /* TSHPaySampleApp.swift */; };
+		3E20FFB92C590AF0003DEB47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E20FFB82C590AF0003DEB47 /* Assets.xcassets */; };
+		3E20FFBC2C590AF0003DEB47 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E20FFBB2C590AF0003DEB47 /* Preview Assets.xcassets */; };
+		3E20FFD42C591F30003DEB47 /* CardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E20FFD32C591F30003DEB47 /* CardListView.swift */; };
+		3E3A67FD2C8C3C61007AA3D2 /* CardFrontModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3A67FC2C8C3C61007AA3D2 /* CardFrontModel.swift */; };
+		3E3A68002C8C43AE007AA3D2 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3E3A67FF2C8C43AE007AA3D2 /* Localizable.xcstrings */; };
+		3E3A68022C8C9EA9007AA3D2 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3A68012C8C9EA9007AA3D2 /* AppView.swift */; };
+		3E3A68042C8D890E007AA3D2 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3A68032C8D890E007AA3D2 /* AppModel.swift */; };
+		3E54C1AD2C7C7C8B00941874 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E54C1AC2C7C7C8B00941874 /* AppDelegate.swift */; };
+		3E54C1B12C7C8D7A00941874 /* TSHPayQA1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E54C1B02C7C8D7A00941874 /* TSHPayQA1.plist */; };
+		3E54C1B32C7C8DC400941874 /* ServerEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E54C1B22C7C8DC400941874 /* ServerEnvironment.swift */; };
+		3E54C1B52C7CA41200941874 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E54C1B42C7CA41200941874 /* GoogleService-Info.plist */; };
+		3E54C1C12C7CD17400941874 /* ToastViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E54C1C02C7CD17400941874 /* ToastViewModifier.swift */; };
+		3E54C1C72C7F54B700941874 /* AddCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E54C1C62C7F54B700941874 /* AddCardView.swift */; };
+		3E54C1CB2C7F58CE00941874 /* CardListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E54C1CA2C7F58CE00941874 /* CardListModel.swift */; };
+		3E54C1CD2C7F61FF00941874 /* CardFrontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E54C1CC2C7F61FF00941874 /* CardFrontView.swift */; };
+		3E9AA8F32CF720B700DB9D08 /* TSHPayPreProd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E9AA8F22CF720B700DB9D08 /* TSHPayPreProd.plist */; };
+		3EABC0F62CF8A1780085951A /* CryptoUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EABC0F32CF8A1780085951A /* CryptoUtil.swift */; };
+		3EABC0F72CF8A1780085951A /* pkcs7_util.c in Sources */ = {isa = PBXBuildFile; fileRef = 3EABC0F52CF8A1780085951A /* pkcs7_util.c */; };
+		3EABC0F92CF8A2D10085951A /* Hexadecimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EABC0F82CF8A2CD0085951A /* Hexadecimal.swift */; };
+		3ECB8D092CC27ECA00C224E2 /* EnrollmentState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECB8D082CC27EC700C224E2 /* EnrollmentState.swift */; };
+		3ECB8D0B2CCAB88400C224E2 /* EnrollmentModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECB8D0A2CCAB87E00C224E2 /* EnrollmentModifier.swift */; };
+		3ED387F72C66436A002154D4 /* AppLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED387F62C66436A002154D4 /* AppLogger.swift */; };
+		DB72C45F2CBEB7B800E52A9C /* PresentmentIntentAssertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB72C45E2CBEB7AC00E52A9C /* PresentmentIntentAssertion.swift */; };
+		DBF0FE492CB3E24100FD4C57 /* PaymentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0FE482CB3E23F00FD4C57 /* PaymentModel.swift */; };
+		DBF0FE4B2CB4041500FD4C57 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0FE4A2CB4040D00FD4C57 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		F414DD05274FB7AF008EFD02 /* Embed Frameworks */ = {
+		DBD8EDA72CB3CBFC0084ED63 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F414DD04274FB7AF008EFD02 /* TSHPaySDK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -91,370 +50,264 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		07A9D1F027F8386C00A004F7 /* IDVSelectionModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDVSelectionModifier.swift; sourceTree = "<group>"; };
-		910E8CF626EA03D900F2A0F7 /* NSError+ErrorForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+ErrorForm.swift"; sourceTree = "<group>"; };
-		910FA757270EECC4008FFC4C /* CardInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInformationView.swift; sourceTree = "<group>"; };
-		910FA759270F0DB8008FFC4C /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		910FA75B270F25AC008FFC4C /* TermsAndConditionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsView.swift; sourceTree = "<group>"; };
-		910FA75F27104810008FFC4C /* IDVSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDVSelectionView.swift; sourceTree = "<group>"; };
-		910FA76127143230008FFC4C /* RadioButtonGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonGroupView.swift; sourceTree = "<group>"; };
-		910FA76327143294008FFC4C /* RadioButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonView.swift; sourceTree = "<group>"; };
-		910FA76527143A47008FFC4C /* IDVCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDVCodeView.swift; sourceTree = "<group>"; };
-		911ED1AA26B1816F00B9BFD3 /* RAGESConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = RAGESConfig.plist; path = TSHPaySample/RAGESConfig.plist; sourceTree = "<group>"; };
-		911ED1AC26B1835700B9BFD3 /* gemcbp.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = gemcbp.plist; path = TSHPaySample/gemcbp.plist; sourceTree = "<group>"; };
-		911ED1B126B80A6600B9BFD3 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		911ED1B226B80A7A00B9BFD3 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		911ED1B526B80CE100B9BFD3 /* TSHPaySample.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TSHPaySample.plist; sourceTree = "<group>"; };
-		911ED1B726B82D5E00B9BFD3 /* CardListHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListHelper.swift; sourceTree = "<group>"; };
-		91249DA427BBAA220024BEB6 /* CardHorizontalListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardHorizontalListView.swift; sourceTree = "<group>"; };
-		91281D7426A1AF600008AC98 /* TshInitState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TshInitState.swift; sourceTree = "<group>"; };
-		91281D7626A1AFDB0008AC98 /* InternalNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalNotifications.swift; sourceTree = "<group>"; };
-		91281D7826A1AFF40008AC98 /* TshEnrollment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TshEnrollment.swift; sourceTree = "<group>"; };
-		91281D7A26A1AFFF0008AC98 /* TshEnrollmentState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TshEnrollmentState.swift; sourceTree = "<group>"; };
-		91281D7C26A1B02C0008AC98 /* AppLogerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogerHelper.swift; sourceTree = "<group>"; };
-		91281D7E26A1B0460008AC98 /* PushNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotification.swift; sourceTree = "<group>"; };
-		913722BE2758B1EF00ED3EB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		913D5DEC2727EFFF000AD019 /* PlaceHolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderView.swift; sourceTree = "<group>"; };
-		9148E44026CFB5BA00EAC98F /* String+Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Padding.swift"; sourceTree = "<group>"; };
-		917F8A4027C7CB79008C1DF4 /* FcmCardOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FcmCardOperation.swift; sourceTree = "<group>"; };
-		9183E0DC26A5C28D008A6DCF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		9183E0E426A6F275008A6DCF /* TSHPaySample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TSHPaySample.entitlements; sourceTree = "<group>"; };
-		9183E10926A849C2008A6DCF /* ObjCSwift.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjCSwift.m; sourceTree = "<group>"; };
-		9183E10B26A84A27008A6DCF /* ObjCSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCSwift.h; sourceTree = "<group>"; };
-		9183E10C26A8557B008A6DCF /* TSHPaySample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "TSHPaySample-Bridging-Header.h"; path = "TSHPaySample/TSHPaySample-Bridging-Header.h"; sourceTree = "<group>"; };
-		9188BD3A26A17D790046639D /* TSHPaySample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TSHPaySample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9188BD3D26A17D790046639D /* TSHPaySampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSHPaySampleApp.swift; sourceTree = "<group>"; };
-		9188BD4126A17D7A0046639D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9188BD4426A17D7A0046639D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		9188BD5126A1869E0046639D /* SdkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SdkHelper.swift; sourceTree = "<group>"; };
-		9188BD5326A187990046639D /* TshPush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TshPush.swift; sourceTree = "<group>"; };
-		9188BD5526A18A560046639D /* FcmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FcmService.swift; sourceTree = "<group>"; };
-		9188BD5726A18C390046639D /* SdkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SdkConstants.swift; sourceTree = "<group>"; };
-		9188BD5926A1A1320046639D /* TshInitBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TshInitBase.swift; sourceTree = "<group>"; };
-		9189130C26DFA6EC00E1E240 /* ViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifier.swift; sourceTree = "<group>"; };
-		9189131E26E0D27200E1E240 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		9189132026E0D27A00E1E240 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		91A996B52796E0B500C9E621 /* SAMKeychain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SAMKeychain.h; path = SAMKeychain/SAMKeychain.h; sourceTree = "<group>"; };
-		91A996B62796E0B500C9E621 /* SAMKeychainQuery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SAMKeychainQuery.h; path = SAMKeychain/SAMKeychainQuery.h; sourceTree = "<group>"; };
-		91A996B72796E0B500C9E621 /* SAMKeychainQuery.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SAMKeychainQuery.m; path = SAMKeychain/SAMKeychainQuery.m; sourceTree = "<group>"; };
-		91A996B82796E0B500C9E621 /* SAMKeychain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SAMKeychain.m; path = SAMKeychain/SAMKeychain.m; sourceTree = "<group>"; };
-		91B48862270B258C0000D400 /* CardFrontView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFrontView.swift; sourceTree = "<group>"; };
-		91B48866270B40D60000D400 /* CardTransactionHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTransactionHistoryView.swift; sourceTree = "<group>"; };
-		91B48868270C82780000D400 /* CardEnrollmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardEnrollmentView.swift; sourceTree = "<group>"; };
-		91BF214627561AF900F9EF8E /* DataPersistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistance.swift; sourceTree = "<group>"; };
-		91C6FCFF272FE19700686616 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		91C6FD112732F78D00686616 /* CardEnrollmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardEnrollmentViewModel.swift; sourceTree = "<group>"; };
-		91C6FD132732FF1600686616 /* NotificationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
-		91CD1E7A26E0F12C00748705 /* libswift_Concurrency.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswift_Concurrency.tbd; path = usr/lib/swift/libswift_Concurrency.tbd; sourceTree = SDKROOT; };
-		91CE48852733C23700CC2E92 /* NotificationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationData.swift; sourceTree = "<group>"; };
-		F414DD02274FB7AF008EFD02 /* TSHPaySDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TSHPaySDK.xcframework; path = TSHSDK/Debug/TSHPaySDK.xcframework; sourceTree = "<group>"; };
-		F421A69C272965BE0023C5AF /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		F421A69D272965BE0023C5AF /* CardDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetail.swift; sourceTree = "<group>"; };
-		F421A69E272965BF0023C5AF /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
-		F421A6A2272965CD0023C5AF /* CardListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardListViewModel.swift; sourceTree = "<group>"; };
-		F421A6A4272965CD0023C5AF /* CardTransactionHistoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTransactionHistoryViewModel.swift; sourceTree = "<group>"; };
-		F42649E82731563C0060A3FC /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
-		F42649EA273156770060A3FC /* ViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
-		F42649EC2731648F0060A3FC /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
-		F42649F0273180F30060A3FC /* SdkStateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SdkStateViewModel.swift; sourceTree = "<group>"; };
-		F4381111273D41E600B5CF29 /* PaymentHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentHelper.swift; sourceTree = "<group>"; };
-		F4381113273EAA9700B5CF29 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
-		F438111527427DA600B5CF29 /* CardArtHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardArtHelper.swift; sourceTree = "<group>"; };
-		F45A32C6273C069600F20DBB /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
-		F45A32C8273C153100F20DBB /* View+HideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+HideKeyboard.swift"; sourceTree = "<group>"; };
-		F45A32CA273C229100F20DBB /* PaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
-		F4AB135E273958D800FCEBB1 /* TransactionHistoryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryHelper.swift; sourceTree = "<group>"; };
+		27FCF2118BFAD6006A68B153 /* Pods-TSHPaySample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TSHPaySample.release.xcconfig"; path = "Target Support Files/Pods-TSHPaySample/Pods-TSHPaySample.release.xcconfig"; sourceTree = "<group>"; };
+		3E20FFB12C590AEE003DEB47 /* TSHPaySample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TSHPaySample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E20FFB42C590AEE003DEB47 /* TSHPaySampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSHPaySampleApp.swift; sourceTree = "<group>"; };
+		3E20FFB82C590AF0003DEB47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3E20FFBB2C590AF0003DEB47 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3E20FFD32C591F30003DEB47 /* CardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListView.swift; sourceTree = "<group>"; };
+		3E3A67FC2C8C3C61007AA3D2 /* CardFrontModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFrontModel.swift; sourceTree = "<group>"; };
+		3E3A67FF2C8C43AE007AA3D2 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		3E3A68012C8C9EA9007AA3D2 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		3E3A68032C8D890E007AA3D2 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		3E54C1AC2C7C7C8B00941874 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3E54C1B02C7C8D7A00941874 /* TSHPayQA1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TSHPayQA1.plist; sourceTree = "<group>"; };
+		3E54C1B22C7C8DC400941874 /* ServerEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerEnvironment.swift; sourceTree = "<group>"; };
+		3E54C1B42C7CA41200941874 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3E54C1B62C7CA48100941874 /* TSHPaySample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TSHPaySample.entitlements; sourceTree = "<group>"; };
+		3E54C1C02C7CD17400941874 /* ToastViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewModifier.swift; sourceTree = "<group>"; };
+		3E54C1C52C7F28A800941874 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3E54C1C62C7F54B700941874 /* AddCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardView.swift; sourceTree = "<group>"; };
+		3E54C1CA2C7F58CE00941874 /* CardListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListModel.swift; sourceTree = "<group>"; };
+		3E54C1CC2C7F61FF00941874 /* CardFrontView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFrontView.swift; sourceTree = "<group>"; };
+		3E9AA8F12CF71C6B00DB9D08 /* TSHPaySample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TSHPaySample-Bridging-Header.h"; sourceTree = "<group>"; };
+		3E9AA8F22CF720B700DB9D08 /* TSHPayPreProd.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TSHPayPreProd.plist; sourceTree = "<group>"; };
+		3EABC0F32CF8A1780085951A /* CryptoUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoUtil.swift; sourceTree = "<group>"; };
+		3EABC0F42CF8A1780085951A /* pkcs7_util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pkcs7_util.h; sourceTree = "<group>"; };
+		3EABC0F52CF8A1780085951A /* pkcs7_util.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pkcs7_util.c; sourceTree = "<group>"; };
+		3EABC0F82CF8A2CD0085951A /* Hexadecimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hexadecimal.swift; sourceTree = "<group>"; };
+		3ECB8D082CC27EC700C224E2 /* EnrollmentState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentState.swift; sourceTree = "<group>"; };
+		3ECB8D0A2CCAB87E00C224E2 /* EnrollmentModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentModifier.swift; sourceTree = "<group>"; };
+		3ED387F62C66436A002154D4 /* AppLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogger.swift; sourceTree = "<group>"; };
+		6B4F739E4AA6A8A2A6C4EF69 /* Pods-TSHPaySample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TSHPaySample.debug.xcconfig"; path = "Target Support Files/Pods-TSHPaySample/Pods-TSHPaySample.debug.xcconfig"; sourceTree = "<group>"; };
+		BC3277888DC1DBF875461008 /* Pods_TSHPaySample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TSHPaySample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB72C45E2CBEB7AC00E52A9C /* PresentmentIntentAssertion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentmentIntentAssertion.swift; sourceTree = "<group>"; };
+		DBF0FE482CB3E23F00FD4C57 /* PaymentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentModel.swift; sourceTree = "<group>"; };
+		DBF0FE4A2CB4040D00FD4C57 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9188BD3726A17D790046639D /* Frameworks */ = {
+		3E20FFAE2C590AEE003DEB47 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9183E0E326A6EE03008A6DCF /* FirebaseMessaging in Frameworks */,
-				F414DD03274FB7AF008EFD02 /* TSHPaySDK.xcframework in Frameworks */,
-				911ED1B426B80C1900B9BFD3 /* libc++.tbd in Frameworks */,
-				9183E0E126A6ECB4008A6DCF /* FirebaseInstallations in Frameworks */,
-				91A996B42796DE5200C9E621 /* Security.framework in Frameworks */,
-				911ED1B326B80BFB00B9BFD3 /* libsqlite3.tbd in Frameworks */,
+				1246A697DFDC445C2327AA12 /* Pods_TSHPaySample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		07A9D1EF27F837BA00A004F7 /* extension */ = {
+		3E20FFA82C590AEE003DEB47 = {
 			isa = PBXGroup;
 			children = (
-				9189130C26DFA6EC00E1E240 /* ViewModifier.swift */,
-				07A9D1F027F8386C00A004F7 /* IDVSelectionModifier.swift */,
-			);
-			path = extension;
-			sourceTree = "<group>";
-		};
-		9148E44226DE2D4D00EAC98F /* ui */ = {
-			isa = PBXGroup;
-			children = (
-				07A9D1EF27F837BA00A004F7 /* extension */,
-				91C6FD132732FF1600686616 /* NotificationView.swift */,
-				F42649EA273156770060A3FC /* ViewRouter.swift */,
-				91B48862270B258C0000D400 /* CardFrontView.swift */,
-				91B48866270B40D60000D400 /* CardTransactionHistoryView.swift */,
-				91B48868270C82780000D400 /* CardEnrollmentView.swift */,
-				910FA757270EECC4008FFC4C /* CardInformationView.swift */,
-				910FA759270F0DB8008FFC4C /* LoadingView.swift */,
-				910FA75B270F25AC008FFC4C /* TermsAndConditionsView.swift */,
-				910FA75F27104810008FFC4C /* IDVSelectionView.swift */,
-				910FA76127143230008FFC4C /* RadioButtonGroupView.swift */,
-				910FA76327143294008FFC4C /* RadioButtonView.swift */,
-				910FA76527143A47008FFC4C /* IDVCodeView.swift */,
-				913D5DEC2727EFFF000AD019 /* PlaceHolderView.swift */,
-				F42649E82731563C0060A3FC /* RootView.swift */,
-				F42649EC2731648F0060A3FC /* SplashView.swift */,
-				F45A32C6273C069600F20DBB /* PaymentView.swift */,
-				91249DA427BBAA220024BEB6 /* CardHorizontalListView.swift */,
-			);
-			path = ui;
-			sourceTree = "<group>";
-		};
-		9183E0D226A5675C008A6DCF /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				91A996B52796E0B500C9E621 /* SAMKeychain.h */,
-				91A996B82796E0B500C9E621 /* SAMKeychain.m */,
-				91A996B62796E0B500C9E621 /* SAMKeychainQuery.h */,
-				91A996B72796E0B500C9E621 /* SAMKeychainQuery.m */,
-				F414DD02274FB7AF008EFD02 /* TSHPaySDK.xcframework */,
-				91C6FCFF272FE19700686616 /* Security.framework */,
-				91CD1E7A26E0F12C00748705 /* libswift_Concurrency.tbd */,
-				9189132026E0D27A00E1E240 /* SwiftUI.framework */,
-				9189131E26E0D27200E1E240 /* Foundation.framework */,
-				911ED1B226B80A7A00B9BFD3 /* libc++.tbd */,
-				911ED1B126B80A6600B9BFD3 /* libsqlite3.tbd */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		9188BD3126A17D790046639D = {
-			isa = PBXGroup;
-			children = (
-				913722BF2758B1EF00ED3EB9 /* Localizable.strings */,
-				911ED1B526B80CE100B9BFD3 /* TSHPaySample.plist */,
-				911ED1AC26B1835700B9BFD3 /* gemcbp.plist */,
-				911ED1AA26B1816F00B9BFD3 /* RAGESConfig.plist */,
-				9183E10C26A8557B008A6DCF /* TSHPaySample-Bridging-Header.h */,
-				9188BD3C26A17D790046639D /* TSHPaySample */,
-				9188BD3B26A17D790046639D /* Products */,
-				9183E0D226A5675C008A6DCF /* Frameworks */,
+				3E20FFB32C590AEE003DEB47 /* TSHPaySample */,
+				3E20FFB22C590AEE003DEB47 /* Products */,
+				E9938DD4F5B77C62F3C26F57 /* Pods */,
+				52FD303AE8115B894B6BCF00 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		9188BD3B26A17D790046639D /* Products */ = {
+		3E20FFB22C590AEE003DEB47 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9188BD3A26A17D790046639D /* TSHPaySample.app */,
+				3E20FFB12C590AEE003DEB47 /* TSHPaySample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9188BD3C26A17D790046639D /* TSHPaySample */ = {
+		3E20FFB32C590AEE003DEB47 /* TSHPaySample */ = {
 			isa = PBXGroup;
 			children = (
-				F421A69B272965B00023C5AF /* viewmodel */,
-				F421A69A272965A70023C5AF /* data */,
-				9183E0E426A6F275008A6DCF /* TSHPaySample.entitlements */,
-				9183E0DC26A5C28D008A6DCF /* GoogleService-Info.plist */,
-				9188BD4E26A182690046639D /* utils */,
-				9148E44226DE2D4D00EAC98F /* ui */,
-				9188BD4B26A182380046639D /* sdk */,
-				9188BD3D26A17D790046639D /* TSHPaySampleApp.swift */,
-				9188BD4126A17D7A0046639D /* Assets.xcassets */,
-				9188BD4326A17D7A0046639D /* Preview Content */,
+				3E54C1C52C7F28A800941874 /* Info.plist */,
+				3E3A67FF2C8C43AE007AA3D2 /* Localizable.xcstrings */,
+				3E54C1B62C7CA48100941874 /* TSHPaySample.entitlements */,
+				3E20FFC22C591D72003DEB47 /* Data */,
+				3E20FFC32C591D85003DEB47 /* Models */,
+				3ED387F52C664359002154D4 /* Utils */,
+				3E20FFC42C591D91003DEB47 /* Views */,
+				3E20FFB42C590AEE003DEB47 /* TSHPaySampleApp.swift */,
+				3E54C1AC2C7C7C8B00941874 /* AppDelegate.swift */,
+				DBF0FE4A2CB4040D00FD4C57 /* SceneDelegate.swift */,
+				3E20FFB82C590AF0003DEB47 /* Assets.xcassets */,
+				3E9AA8F22CF720B700DB9D08 /* TSHPayPreProd.plist */,
+				3E54C1B02C7C8D7A00941874 /* TSHPayQA1.plist */,
+				3E9AA8F12CF71C6B00DB9D08 /* TSHPaySample-Bridging-Header.h */,
+				3E54C1B42C7CA41200941874 /* GoogleService-Info.plist */,
+				3E20FFBA2C590AF0003DEB47 /* Preview Content */,
 			);
 			path = TSHPaySample;
 			sourceTree = "<group>";
 		};
-		9188BD4326A17D7A0046639D /* Preview Content */ = {
+		3E20FFBA2C590AF0003DEB47 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				9188BD4426A17D7A0046639D /* Preview Assets.xcassets */,
+				3E20FFBB2C590AF0003DEB47 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		9188BD4B26A182380046639D /* sdk */ = {
+		3E20FFC22C591D72003DEB47 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				9188BD5026A186120046639D /* helpers */,
-				9188BD4F26A186050046639D /* enrollment */,
-				9188BD4D26A1825D0046639D /* push */,
-				9188BD4C26A182530046639D /* init */,
-				9188BD5126A1869E0046639D /* SdkHelper.swift */,
-				9188BD5726A18C390046639D /* SdkConstants.swift */,
+				3E54C1B22C7C8DC400941874 /* ServerEnvironment.swift */,
 			);
-			path = sdk;
+			path = Data;
 			sourceTree = "<group>";
 		};
-		9188BD4C26A182530046639D /* init */ = {
+		3E20FFC32C591D85003DEB47 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9188BD5926A1A1320046639D /* TshInitBase.swift */,
-				91281D7426A1AF600008AC98 /* TshInitState.swift */,
+				3E3A68032C8D890E007AA3D2 /* AppModel.swift */,
+				3E54C1CA2C7F58CE00941874 /* CardListModel.swift */,
+				3E3A67FC2C8C3C61007AA3D2 /* CardFrontModel.swift */,
+				3ECB8D082CC27EC700C224E2 /* EnrollmentState.swift */,
+				DBF0FE482CB3E23F00FD4C57 /* PaymentModel.swift */,
 			);
-			path = init;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		9188BD4D26A1825D0046639D /* push */ = {
+		3E20FFC42C591D91003DEB47 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9188BD5326A187990046639D /* TshPush.swift */,
-				9188BD5526A18A560046639D /* FcmService.swift */,
+				3E3A67FE2C8C3CB6007AA3D2 /* ViewElements */,
+				3E54C1BF2C7CD16000941874 /* ViewModifiers */,
+				3E3A68012C8C9EA9007AA3D2 /* AppView.swift */,
+				3E54C1C62C7F54B700941874 /* AddCardView.swift */,
+				3E20FFD32C591F30003DEB47 /* CardListView.swift */,
 			);
-			path = push;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		9188BD4E26A182690046639D /* utils */ = {
+		3E3A67FE2C8C3CB6007AA3D2 /* ViewElements */ = {
 			isa = PBXGroup;
 			children = (
-				91281D7C26A1B02C0008AC98 /* AppLogerHelper.swift */,
-				91281D7E26A1B0460008AC98 /* PushNotification.swift */,
-				9183E10926A849C2008A6DCF /* ObjCSwift.m */,
-				9183E10B26A84A27008A6DCF /* ObjCSwift.h */,
-				9148E44026CFB5BA00EAC98F /* String+Padding.swift */,
-				910E8CF626EA03D900F2A0F7 /* NSError+ErrorForm.swift */,
-				F45A32C8273C153100F20DBB /* View+HideKeyboard.swift */,
-				91BF214627561AF900F9EF8E /* DataPersistance.swift */,
+				3E54C1CC2C7F61FF00941874 /* CardFrontView.swift */,
 			);
-			path = utils;
+			path = ViewElements;
 			sourceTree = "<group>";
 		};
-		9188BD4F26A186050046639D /* enrollment */ = {
+		3E54C1BF2C7CD16000941874 /* ViewModifiers */ = {
 			isa = PBXGroup;
 			children = (
-				91281D7826A1AFF40008AC98 /* TshEnrollment.swift */,
-				91281D7A26A1AFFF0008AC98 /* TshEnrollmentState.swift */,
+				3E54C1C02C7CD17400941874 /* ToastViewModifier.swift */,
+				3ECB8D0A2CCAB87E00C224E2 /* EnrollmentModifier.swift */,
 			);
-			path = enrollment;
+			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
-		9188BD5026A186120046639D /* helpers */ = {
+		3EABC0F22CF8A1590085951A /* Crypto */ = {
 			isa = PBXGroup;
 			children = (
-				91281D7626A1AFDB0008AC98 /* InternalNotifications.swift */,
-				911ED1B726B82D5E00B9BFD3 /* CardListHelper.swift */,
-				91CE48852733C23700CC2E92 /* NotificationData.swift */,
-				F4AB135E273958D800FCEBB1 /* TransactionHistoryHelper.swift */,
-				F4381111273D41E600B5CF29 /* PaymentHelper.swift */,
-				F438111527427DA600B5CF29 /* CardArtHelper.swift */,
+				3EABC0F32CF8A1780085951A /* CryptoUtil.swift */,
+				3EABC0F82CF8A2CD0085951A /* Hexadecimal.swift */,
+				3EABC0F42CF8A1780085951A /* pkcs7_util.h */,
+				3EABC0F52CF8A1780085951A /* pkcs7_util.c */,
 			);
-			path = helpers;
+			path = Crypto;
 			sourceTree = "<group>";
 		};
-		F421A69A272965A70023C5AF /* data */ = {
+		3ED387F52C664359002154D4 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				F421A69C272965BE0023C5AF /* Card.swift */,
-				F421A69D272965BE0023C5AF /* CardDetail.swift */,
-				F421A69E272965BF0023C5AF /* Transaction.swift */,
-				917F8A4027C7CB79008C1DF4 /* FcmCardOperation.swift */,
+				3EABC0F22CF8A1590085951A /* Crypto */,
+				DB72C45E2CBEB7AC00E52A9C /* PresentmentIntentAssertion.swift */,
+				3ED387F62C66436A002154D4 /* AppLogger.swift */,
 			);
-			path = data;
+			path = Utils;
 			sourceTree = "<group>";
 		};
-		F421A69B272965B00023C5AF /* viewmodel */ = {
+		52FD303AE8115B894B6BCF00 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F421A6A2272965CD0023C5AF /* CardListViewModel.swift */,
-				F421A6A4272965CD0023C5AF /* CardTransactionHistoryViewModel.swift */,
-				F42649F0273180F30060A3FC /* SdkStateViewModel.swift */,
-				91C6FD112732F78D00686616 /* CardEnrollmentViewModel.swift */,
-				F45A32CA273C229100F20DBB /* PaymentViewModel.swift */,
-				F4381113273EAA9700B5CF29 /* BaseViewModel.swift */,
+				BC3277888DC1DBF875461008 /* Pods_TSHPaySample.framework */,
 			);
-			path = viewmodel;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E9938DD4F5B77C62F3C26F57 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6B4F739E4AA6A8A2A6C4EF69 /* Pods-TSHPaySample.debug.xcconfig */,
+				27FCF2118BFAD6006A68B153 /* Pods-TSHPaySample.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9188BD3926A17D790046639D /* TSHPaySample */ = {
+		3E20FFB02C590AEE003DEB47 /* TSHPaySample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9188BD4826A17D7A0046639D /* Build configuration list for PBXNativeTarget "TSHPaySample" */;
+			buildConfigurationList = 3E20FFBF2C590AF0003DEB47 /* Build configuration list for PBXNativeTarget "TSHPaySample" */;
 			buildPhases = (
-				9188BD3626A17D790046639D /* Sources */,
-				9188BD3726A17D790046639D /* Frameworks */,
-				9188BD3826A17D790046639D /* Resources */,
-				9199A9F1273C1B9700FF9936 /* ShellScript */,
-				F414DD05274FB7AF008EFD02 /* Embed Frameworks */,
+				087AE707B6722A392245825B /* [CP] Check Pods Manifest.lock */,
+				3E20FFAD2C590AEE003DEB47 /* Sources */,
+				3E20FFAE2C590AEE003DEB47 /* Frameworks */,
+				3E20FFAF2C590AEE003DEB47 /* Resources */,
+				DBD8EDA72CB3CBFC0084ED63 /* Embed Frameworks */,
+				30B5B51016A5EDA08B255C4F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = TSHPaySample;
-			packageProductDependencies = (
-				9183E0E026A6ECB4008A6DCF /* FirebaseInstallations */,
-				9183E0E226A6EE03008A6DCF /* FirebaseMessaging */,
-			);
 			productName = TSHPaySample;
-			productReference = 9188BD3A26A17D790046639D /* TSHPaySample.app */;
+			productReference = 3E20FFB12C590AEE003DEB47 /* TSHPaySample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		9188BD3226A17D790046639D /* Project object */ = {
+		3E20FFA92C590AEE003DEB47 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1300;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
-					9188BD3926A17D790046639D = {
-						CreatedOnToolsVersion = 13.0;
+					3E20FFB02C590AEE003DEB47 = {
+						CreatedOnToolsVersion = 15.4;
 					};
 				};
 			};
-			buildConfigurationList = 9188BD3526A17D790046639D /* Build configuration list for PBXProject "TSHPaySample" */;
-			compatibilityVersion = "Xcode 13.0";
+			buildConfigurationList = 3E20FFAC2C590AEE003DEB47 /* Build configuration list for PBXProject "TSHPaySample" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 9188BD3126A17D790046639D;
-			packageReferences = (
-				9183E0DB26A5C261008A6DCF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-			);
-			productRefGroup = 9188BD3B26A17D790046639D /* Products */;
+			mainGroup = 3E20FFA82C590AEE003DEB47;
+			productRefGroup = 3E20FFB22C590AEE003DEB47 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9188BD3926A17D790046639D /* TSHPaySample */,
+				3E20FFB02C590AEE003DEB47 /* TSHPaySample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9188BD3826A17D790046639D /* Resources */ = {
+		3E20FFAF2C590AEE003DEB47 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				911ED1AD26B1835700B9BFD3 /* gemcbp.plist in Resources */,
-				911ED1AB26B1816F00B9BFD3 /* RAGESConfig.plist in Resources */,
-				9188BD4526A17D7A0046639D /* Preview Assets.xcassets in Resources */,
-				913722BD2758B1EF00ED3EB9 /* Localizable.strings in Resources */,
-				9188BD4226A17D7A0046639D /* Assets.xcassets in Resources */,
-				911ED1B626B80CE100B9BFD3 /* TSHPaySample.plist in Resources */,
-				9183E0DD26A5C28E008A6DCF /* GoogleService-Info.plist in Resources */,
+				3E54C1B12C7C8D7A00941874 /* TSHPayQA1.plist in Resources */,
+				3E3A68002C8C43AE007AA3D2 /* Localizable.xcstrings in Resources */,
+				3E9AA8F32CF720B700DB9D08 /* TSHPayPreProd.plist in Resources */,
+				3E54C1B52C7CA41200941874 /* GoogleService-Info.plist in Resources */,
+				3E20FFBC2C590AF0003DEB47 /* Preview Assets.xcassets in Resources */,
+				3E20FFB92C590AF0003DEB47 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9199A9F1273C1B9700FF9936 /* ShellScript */ = {
+		087AE707B6722A392245825B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -462,102 +315,78 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TSHPaySample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "
-";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		30B5B51016A5EDA08B255C4F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TSHPaySample/Pods-TSHPaySample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TSHPaySample/Pods-TSHPaySample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TSHPaySample/Pods-TSHPaySample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9188BD3626A17D790046639D /* Sources */ = {
+		3E20FFAD2C590AEE003DEB47 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				910FA76627143A47008FFC4C /* IDVCodeView.swift in Sources */,
-				F4AB135F273958D800FCEBB1 /* TransactionHistoryHelper.swift in Sources */,
-				F42649ED2731648F0060A3FC /* SplashView.swift in Sources */,
-				91281D7526A1AF600008AC98 /* TshInitState.swift in Sources */,
-				9189130D26DFA6EC00E1E240 /* ViewModifier.swift in Sources */,
-				91281D7726A1AFDB0008AC98 /* InternalNotifications.swift in Sources */,
-				91281D7F26A1B0460008AC98 /* PushNotification.swift in Sources */,
-				9188BD5226A1869E0046639D /* SdkHelper.swift in Sources */,
-				91C6FD122732F78D00686616 /* CardEnrollmentViewModel.swift in Sources */,
-				F421A6A1272965BF0023C5AF /* Transaction.swift in Sources */,
-				91281D7B26A1AFFF0008AC98 /* TshEnrollmentState.swift in Sources */,
-				9188BD5A26A1A1320046639D /* TshInitBase.swift in Sources */,
-				F438111627427DA600B5CF29 /* CardArtHelper.swift in Sources */,
-				91A996B92796E70B00C9E621 /* SAMKeychain.m in Sources */,
-				910FA75A270F0DB8008FFC4C /* LoadingView.swift in Sources */,
-				91281D7926A1AFF40008AC98 /* TshEnrollment.swift in Sources */,
-				F45A32CB273C229100F20DBB /* PaymentViewModel.swift in Sources */,
-				07A9D1F127F8386C00A004F7 /* IDVSelectionModifier.swift in Sources */,
-				F42649EB273156770060A3FC /* ViewRouter.swift in Sources */,
-				9183E10A26A849C2008A6DCF /* ObjCSwift.m in Sources */,
-				91BF214727561AF900F9EF8E /* DataPersistance.swift in Sources */,
-				9148E44126CFB5BA00EAC98F /* String+Padding.swift in Sources */,
-				9188BD3E26A17D790046639D /* TSHPaySampleApp.swift in Sources */,
-				917F8A4127C7CB79008C1DF4 /* FcmCardOperation.swift in Sources */,
-				91B48869270C82780000D400 /* CardEnrollmentView.swift in Sources */,
-				911ED1B826B82D5E00B9BFD3 /* CardListHelper.swift in Sources */,
-				91B48867270B40D60000D400 /* CardTransactionHistoryView.swift in Sources */,
-				F421A6A5272965CD0023C5AF /* CardListViewModel.swift in Sources */,
-				910FA758270EECC4008FFC4C /* CardInformationView.swift in Sources */,
-				91C6FD142732FF1600686616 /* NotificationView.swift in Sources */,
-				F4381112273D41E600B5CF29 /* PaymentHelper.swift in Sources */,
-				91CE48862733C23700CC2E92 /* NotificationData.swift in Sources */,
-				91281D7D26A1B02C0008AC98 /* AppLogerHelper.swift in Sources */,
-				F4381114273EAA9700B5CF29 /* BaseViewModel.swift in Sources */,
-				91B48863270B258C0000D400 /* CardFrontView.swift in Sources */,
-				9188BD5826A18C390046639D /* SdkConstants.swift in Sources */,
-				F42649F1273180F30060A3FC /* SdkStateViewModel.swift in Sources */,
-				F421A6A0272965BF0023C5AF /* CardDetail.swift in Sources */,
-				913D5DED2727EFFF000AD019 /* PlaceHolderView.swift in Sources */,
-				F42649E92731563C0060A3FC /* RootView.swift in Sources */,
-				9188BD5626A18A560046639D /* FcmService.swift in Sources */,
-				910FA76227143231008FFC4C /* RadioButtonGroupView.swift in Sources */,
-				F45A32C9273C153100F20DBB /* View+HideKeyboard.swift in Sources */,
-				F421A6A7272965CD0023C5AF /* CardTransactionHistoryViewModel.swift in Sources */,
-				910FA75C270F25AC008FFC4C /* TermsAndConditionsView.swift in Sources */,
-				91249DA527BBAA230024BEB6 /* CardHorizontalListView.swift in Sources */,
-				91A996BA2796E70F00C9E621 /* SAMKeychainQuery.m in Sources */,
-				910E8CF726EA03D900F2A0F7 /* NSError+ErrorForm.swift in Sources */,
-				910FA76427143294008FFC4C /* RadioButtonView.swift in Sources */,
-				F45A32C7273C069600F20DBB /* PaymentView.swift in Sources */,
-				910FA76027104810008FFC4C /* IDVSelectionView.swift in Sources */,
-				9188BD5426A187990046639D /* TshPush.swift in Sources */,
-				F421A69F272965BF0023C5AF /* Card.swift in Sources */,
+				3E54C1CB2C7F58CE00941874 /* CardListModel.swift in Sources */,
+				3E54C1AD2C7C7C8B00941874 /* AppDelegate.swift in Sources */,
+				DB72C45F2CBEB7B800E52A9C /* PresentmentIntentAssertion.swift in Sources */,
+				3E54C1CD2C7F61FF00941874 /* CardFrontView.swift in Sources */,
+				3E3A68022C8C9EA9007AA3D2 /* AppView.swift in Sources */,
+				3E54C1C12C7CD17400941874 /* ToastViewModifier.swift in Sources */,
+				3ECB8D0B2CCAB88400C224E2 /* EnrollmentModifier.swift in Sources */,
+				DBF0FE492CB3E24100FD4C57 /* PaymentModel.swift in Sources */,
+				3EABC0F62CF8A1780085951A /* CryptoUtil.swift in Sources */,
+				3EABC0F72CF8A1780085951A /* pkcs7_util.c in Sources */,
+				DBF0FE4B2CB4041500FD4C57 /* SceneDelegate.swift in Sources */,
+				3E3A68042C8D890E007AA3D2 /* AppModel.swift in Sources */,
+				3E54C1C72C7F54B700941874 /* AddCardView.swift in Sources */,
+				3EABC0F92CF8A2D10085951A /* Hexadecimal.swift in Sources */,
+				3E20FFD42C591F30003DEB47 /* CardListView.swift in Sources */,
+				3E54C1B32C7C8DC400941874 /* ServerEnvironment.swift in Sources */,
+				3E20FFB52C590AEE003DEB47 /* TSHPaySampleApp.swift in Sources */,
+				3ED387F72C66436A002154D4 /* AppLogger.swift in Sources */,
+				3E3A67FD2C8C3C61007AA3D2 /* CardFrontModel.swift in Sources */,
+				3ECB8D092CC27ECA00C224E2 /* EnrollmentState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		913722BF2758B1EF00ED3EB9 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				913722BE2758B1EF00ED3EB9 /* en */,
-			);
-			name = Localizable.strings;
-			path = TSHPaySample;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		9188BD4626A17D7A0046639D /* Debug */ = {
+		3E20FFBD2C590AF0003DEB47 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -587,7 +416,8 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -601,24 +431,26 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		9188BD4726A17D7A0046639D /* Release */ = {
+		3E20FFBE2C590AF0003DEB47 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -648,7 +480,8 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -656,161 +489,115 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		9188BD4926A17D7A0046639D /* Debug */ = {
+		3E20FFC02C590AF0003DEB47 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B4F739E4AA6A8A2A6C4EF69 /* Pods-TSHPaySample.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CODE_SIGN_ENTITLEMENTS = TSHPaySample/TSHPaySample.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TSHPaySample/Preview Content\"";
-				DEVELOPMENT_TEAM = 8F83X2SF75;
-				ENABLE_BITCODE = NO;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
-				EXCLUDED_ARCHS = "";
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/TSHSDK/Debug";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"SANDBOX=1",
-					"$(inherited)",
-				);
+				ENABLE_USER_SCRIPT_SANDBOXING = false;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = TSHPaySample/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "TSHPaySample Authentication with TouchId or FaceID";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SDKROOT)/usr/lib/swift",
-				);
-				MARKETING_VERSION = 1.0.0;
-				OTHER_SWIFT_FLAGS = "-D SANDBOX";
-				PRODUCT_BUNDLE_IDENTIFIER = com.thalesgroup.tshpaysample;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thalesgroup.gemalto.tshpaysdk.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/$(SWIFT_MODULE_NAME)-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/TSHPaySample/TSHPaySample-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_WORKSPACE = YES;
 			};
 			name = Debug;
 		};
-		9188BD4A26A17D7A0046639D /* Release */ = {
+		3E20FFC12C590AF0003DEB47 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27FCF2118BFAD6006A68B153 /* Pods-TSHPaySample.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CODE_SIGN_ENTITLEMENTS = TSHPaySample/TSHPaySample.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 7;
-				DEPLOYMENT_POSTPROCESSING = YES;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TSHPaySample/Preview Content\"";
-				DEVELOPMENT_TEAM = 8F83X2SF75;
-				ENABLE_BITCODE = NO;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
-				EXCLUDED_ARCHS = "";
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/TSHSDK/Debug";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = false;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = TSHPaySample/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "TSHPaySample Authentication with TouchId or FaceID";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SDKROOT)/usr/lib/swift",
-				);
-				MARKETING_VERSION = 1.0.0;
-				OTHER_CFLAGS = "-fstack-protector-all";
-				OTHER_SWIFT_FLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.thalesgroup.tshpaysample;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thalesgroup.gemalto.tshpaysdk.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/$(SWIFT_MODULE_NAME)-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/TSHPaySample/TSHPaySample-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_WORKSPACE = YES;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9188BD3526A17D790046639D /* Build configuration list for PBXProject "TSHPaySample" */ = {
+		3E20FFAC2C590AEE003DEB47 /* Build configuration list for PBXProject "TSHPaySample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9188BD4626A17D7A0046639D /* Debug */,
-				9188BD4726A17D7A0046639D /* Release */,
+				3E20FFBD2C590AF0003DEB47 /* Debug */,
+				3E20FFBE2C590AF0003DEB47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9188BD4826A17D7A0046639D /* Build configuration list for PBXNativeTarget "TSHPaySample" */ = {
+		3E20FFBF2C590AF0003DEB47 /* Build configuration list for PBXNativeTarget "TSHPaySample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9188BD4926A17D7A0046639D /* Debug */,
-				9188BD4A26A17D7A0046639D /* Release */,
+				3E20FFC02C590AF0003DEB47 /* Debug */,
+				3E20FFC12C590AF0003DEB47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		9183E0DB26A5C261008A6DCF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 7.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		9183E0E026A6ECB4008A6DCF /* FirebaseInstallations */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9183E0DB26A5C261008A6DCF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseInstallations;
-		};
-		9183E0E226A6EE03008A6DCF /* FirebaseMessaging */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9183E0DB26A5C261008A6DCF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseMessaging;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 9188BD3226A17D790046639D /* Project object */;
+	rootObject = 3E20FFA92C590AEE003DEB47 /* Project object */;
 }

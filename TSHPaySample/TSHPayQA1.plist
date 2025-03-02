@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CPS_URL</key>
+	<string></string>
+	<key>CSR_DOMAIN</key>
+	<string></string>
+	<key>CSR_EMAIL</key>
+	<string></string>
+	<key>GATEWAY_URL</key>
+	<string></string>
+	<key>MG_CONNECTION_URL</key>
+	<string></string>
+	<key>MG_WALLET_APPLICATION_ID</key>
+	<string></string>
+	<key>MG_WALLET_PROVIDER_ID</key>
+	<string></string>
+	<key>OAUTH_CONSUMER_KEY</key>
+	<string></string>
+	<key>REALM</key>
+	<string></string>
+	<key>SAMPLE_CARD_CVV</key>
+	<string></string>
+	<key>SAMPLE_CARD_EXP</key>
+	<string></string>
+	<key>SAMPLE_CARD_PAN</key>
+	<string></string>
+	<key>SAMPLE_KEY_IDENTIFIER</key>
+	<string></string>
+	<key>SAMPLE_PUBLIC_KEY</key>
+	<string></string>
+	<key>SECURE_LOG_LEVEL</key>
+	<integer>0</integer>
+	<key>SIMULATOR_TEAM_ID</key>
+	<string></string>
+	<key>TRANSACTION_HISTORY_CONNECTION_URL</key>
+	<string></string>
+</dict>
+</plist>

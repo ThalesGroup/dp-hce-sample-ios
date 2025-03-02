@@ -1,0 +1,162 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Accept" : {
+
+    },
+    "Add card" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add card"
+          }
+        }
+      }
+    },
+    "Back" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back"
+          }
+        }
+      }
+    },
+    "Cancel" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
+        }
+      }
+    },
+    "Card list" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Card list"
+          }
+        }
+      }
+    },
+    "Change card state" : {
+
+    },
+    "Choose one of this" : {
+
+    },
+    "Default\n card" : {
+
+    },
+    "Default card operation" : {
+
+    },
+    "Delete" : {
+
+    },
+    "Do you want remove the current default payment card?" : {
+
+    },
+    "Do you want replenish card?" : {
+
+    },
+    "Do you want set the current payment card as default?" : {
+
+    },
+    "Enroll card" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enroll card"
+          }
+        }
+      }
+    },
+    "LoremIpsum" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultricies felis vulputate neque malesuada, sed dignissim nisl elementum. Sed vel lectus dolor. Quisque porta eget mi a efficitur. Morbi sollicitudin elit ac elit sagittis, nec gravida elit vestibulum. Nulla sit amet auctor tortor. Cras faucibus sit amet lacus a consectetur. Nunc ullamcorper consequat nisi quis rhoncus.\r\rPhasellus ac nisi sit amet elit porttitor vulputate id id magna. Suspendisse eu ipsum non mi euismod pulvinar. Curabitur sagittis pharetra nulla, a porttitor diam feugiat vel. Phasellus a vestibulum est. Proin vitae magna in nunc tristique pulvinar ac id mauris. Sed lectus turpis, venenatis egestas accumsan at, euismod fermentum ipsum. Vestibulum lacus est, gravida vitae sagittis consequat, convallis et neque. Donec id est in metus ultricies lobortis nec sed nunc. Nam fermentum pretium ligula, quis convallis libero accumsan sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit.\r\rClass aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque turpis odio, tempor eu erat ac, faucibus vestibulum lectus. Duis volutpat, risus nec rhoncus venenatis, lectus felis blandit mauris, nec varius diam neque et ante. Sed enim dui, accumsan et fringilla sit amet, porta non odio. Mauris quis sem et dolor molestie ultrices vel eget orci. In aliquet purus nibh, ac vehicula mauris ullamcorper et. Vivamus varius efficitur sagittis.\r\rSuspendisse potenti. Vivamus in tellus facilisis, consequat erat eu, vestibulum mi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed ac augue tincidunt, faucibus metus id, volutpat odio. Phasellus luctus lacinia viverra. Mauris dapibus augue id sapien rutrum tempor. Quisque tempor facilisis odio. Ut tortor odio, euismod in dapibus sit amet, hendrerit id est. Etiam laoreet, ex id commodo ultrices, nisi ipsum mattis risus, id mollis magna neque non velit. Aenean fringilla arcu ut elit sollicitudin imperdiet. Phasellus scelerisque nunc id fringilla porttitor. Nam varius arcu quis lectus interdum vestibulum ac eget ante. Nam suscipit ante a dui aliquam laoreet eget at magna. Etiam ornare, sapien vel porta vestibulum, nisi dui viverra odio, ac hendrerit dolor odio et tellus. Sed aliquet elit id leo convallis, vitae facilisis neque egestas. Mauris porttitor aliquam orci, tempus aliquam nibh rhoncus eu.\r\rCurabitur et quam sed quam pharetra cursus vel sed nibh. Etiam cursus velit sit amet lacus rhoncus, sed tempus orci lacinia. Pellentesque luctus eu sem et pretium. Mauris luctus velit mauris, et malesuada massa lobortis vitae. Ut posuere nibh quis arcu sodales viverra. Vivamus volutpat sem ut ligula lacinia pellentesque. Vivamus a lorem sit amet orci dignissim euismod. Nullam commodo nibh vel nunc fringilla accumsan. Curabitur vehicula vehicula nulla, eu rutrum turpis varius ac. Donec gravida tempor ligula a convallis. Curabitur ullamcorper nibh vitae sapien placerat, eu facilisis felis porttitor. Sed id porta velit. Nunc iaculis bibendum egestas."
+          }
+        }
+      }
+    },
+    "Manual Payment" : {
+
+    },
+    "Needs\n replenishment" : {
+
+    },
+    "No" : {
+
+    },
+    "Please enter the verification:" : {
+
+    },
+    "Please select authentication method" : {
+
+    },
+    "Reject" : {
+
+    },
+    "Replenishment" : {
+
+    },
+    "Resume" : {
+
+    },
+    "SECURITY CODE" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SECURITY CODE"
+          }
+        }
+      }
+    },
+    "Status\n of card" : {
+
+    },
+    "Suspended" : {
+
+    },
+    "VALID THRU" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VALID THRU"
+          }
+        }
+      }
+    },
+    "Verification value" : {
+
+    },
+    "Yes" : {
+
+    },
+    "Your Wallet is empty, please\n add new card" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your Wallet is empty, please\n add new card"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
