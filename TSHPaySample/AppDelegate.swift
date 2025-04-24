@@ -7,7 +7,7 @@ import Observation
 import TSHPaySDK
 import Firebase
 
-let serverEnvironment: ServerEnvironment = ServerEnvironment(.qa1)
+let serverEnvironment: ServerEnvironment = ServerEnvironment(.preprod2)
 
 class AppDelegate: AppModel, UIApplicationDelegate, UNUserNotificationCenterDelegate {
     

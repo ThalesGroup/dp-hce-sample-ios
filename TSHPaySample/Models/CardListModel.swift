@@ -32,19 +32,25 @@ class CardListModel: ObservableObject {
         }
         
         Task {
-            var retList: [CardFrontModel] = []
-            for loopCard in try await DigitalCardManager().cardList {
-                // Add card to UI
-                await retList.append(CardFrontModel(loopCard))
+            // Remove cards that are no longer part of the list.
+            let newCardList = try await DigitalCardManager().cardList
+            cardList.removeAll { oldCard in
+                return !newCardList.contains { newCard in
+                    return newCard.digitalCardID == oldCard.digitalCardID
+                }
+            }
+            
+            // Add or reload the list of cards and check for replenishment.
+            for loopNewCard in newCardList {
+                if let foundCard = cardList.first(where: { $0.digitalCardID == loopNewCard.digitalCardID }) {
+                    await foundCard.reloadCarddata(loopNewCard)
+                } else {
+                    await self.cardList.append(CardFrontModel(loopNewCard))
+                }
                 
                 // Check for replenishment.
-                await triggerReplenishmentIfNeeded(digitalCard: loopCard)
+                await triggerReplenishmentIfNeeded(digitalCard: loopNewCard)
             }
-            
-            await MainActor.run {
-                self.cardList = retList
-            }
-            
         }
     }
     

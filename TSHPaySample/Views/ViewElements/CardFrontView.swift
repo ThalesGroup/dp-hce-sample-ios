@@ -41,17 +41,6 @@ struct CardFrontView: View {
                 Spacer()
                 HStack {
                     VStack(alignment: .leading) {
-                        Text("SECURITY CODE")
-                            .font(.caption)
-                            .foregroundColor(Color.white)
-                        Text(cardDetail.cardCvv.valueFormated)
-                            .font(.caption)
-                            .fontWeight(.bold)
-                            .foregroundColor(Color.white)
-                            .lineLimit(1)
-                    }.padding()
-                    Spacer()
-                    VStack(alignment: .leading) {
                         Text("VALID THRU")
                             .font(.caption)
                             .foregroundColor(Color.white)
@@ -61,6 +50,19 @@ struct CardFrontView: View {
                             .foregroundColor(Color.white)
                             .lineLimit(1)
                     }.padding()
+                    
+                    VStack(alignment: .leading) {
+                        Text("SECURITY CODE")
+                            .font(.caption)
+                            .foregroundColor(Color.white)
+                        Text(cardDetail.cardCvv.valueFormated)
+                            .font(.caption)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.white)
+                            .lineLimit(1)
+                    }.padding()
+
+                    Spacer()
                 }
             }
         }

@@ -5,7 +5,7 @@
 import Foundation
 
 enum Targets {
-    case qa1, preprod
+    case qa1, preprod, preprod2
 }
 
 struct ServerEnvironment {
@@ -43,6 +43,8 @@ struct ServerEnvironment {
             return "QA 1"
         case .preprod:
             return "Pre production"
+        case .preprod2:
+            return "Pre production V2"
         }
     }
     
@@ -59,6 +61,8 @@ struct ServerEnvironment {
             return "TSHPayQA1"
         case .preprod:
             return "TSHPayPreProd"
+        case .preprod2:
+            return "TSHPayPreProd2"
         }
     }
     

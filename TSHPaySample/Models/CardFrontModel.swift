@@ -91,32 +91,7 @@ class CardFrontModel: ToastHelper, ObservableObject {
         self.isDefaultCard = false
         super.init()
                 
-        // Load card metadata.. it might require backend call so it's asynchronous.
-        do {
-            let metaData = try await card.cardMetaData
-            self.cardState = try await card.state
-            self.needsReplenishment = try await card.paymentKeyInfo.needsReplenishment
-            self.isDefaultCard = try await card.isDefaultCard
-            if let last4 = metaData.panLastDigits  {
-                self.cardPan.value = "************\(last4)"
-            } else {
-                self.cardPan.value = "--"
-            }
-            self.cardExp.value = metaData.panExpiry ?? "--"
-            self.cardCvv.value = "***"
-        } catch {
-            //TODO: HANDLE ERROR
-        }
-        
-        // Load card background image either from cache or from the scheme.
-        Task.detached() {
-            let cardArt = try await card.cardArt
-            if let bitmap = try await cardArt.bitmap(forArtType: .cardBackground).resource() {
-                await MainActor.run {
-                    self.cardBackground = UIImage(data: bitmap)
-                }
-            }
-        }
+        await reloadCarddata(card)
     }
     
     init(pan: String, exp: String, cvv: String, needsReplenishment: Bool, isDefaultCard: Bool) {
@@ -146,6 +121,36 @@ class CardFrontModel: ToastHelper, ObservableObject {
     }
     
     // MARK: - TSHPay methods
+    
+    @MainActor public func reloadCarddata(_ card: DigitalCard) async {
+        // Load card metadata.. it might require backend call so it's asynchronous.
+        do {
+            let metaData = try await card.cardMetaData
+            self.cardState = try await card.state
+            self.needsReplenishment = try await card.paymentKeyInfo.needsReplenishment
+            self.isDefaultCard = try await card.isDefaultCard
+            if let last4 = metaData.panLastDigits  {
+                self.cardPan.value = "************\(last4)"
+            } else {
+                self.cardPan.value = "--"
+            }
+            self.cardExp.value = metaData.panExpiry ?? "--"
+            self.cardCvv.value = "***"
+        } catch {
+            //TODO: HANDLE ERROR
+        }
+        
+        // Load card background image either from cache or from the scheme.
+        Task.detached() {
+            let cardBitmap = try await card.cardArt.bitmap(forArtType: .cardBackgroundCombined)
+            
+            if let resouce = cardBitmap.resource(), let image = UIImage(data:resouce)  {
+                await MainActor.run {
+                    self.cardBackground = image
+                }
+            }
+        }
+    }
     
     /**
      Request pull-mode request to replenish the card.
@@ -218,11 +223,8 @@ class CardFrontModel: ToastHelper, ObservableObject {
     public func changeCardState(cardManagmentAction: DigitalCardManager.CardManagementAction) {
         Task {
             do {
+                // Actual change is delivered through push notification and it will reload the UI accordingly.
                 _ = try await DigitalCardManager().manage(digitalCardID: self.digitalCardID, action: cardManagmentAction)
-                let cardState = try await DigitalCardManager().digitalCard(forID: self.digitalCardID)?.state
-                DispatchQueue.main.async {
-                    self.cardState =  cardState ?? DigitalCard.State.unknown
-                }
             } catch {
                 toastShow(caption: "change card state", description: error.localizedDescription, type: .error)
             }
