@@ -10,7 +10,7 @@ public enum EnrollmentState: Equatable {
         case (.notStarted, .notStarted),(.started, .started), (.digitization, .digitization),
             (.waitingForResponse, .waitingForResponse), (.activation, .activation),
             (.termsAndConditions(acceptanceData: _), .termsAndConditions(acceptanceData: _)),
-            (.digitizationApprovedWithIDV(digitalCardID: _, idvMethodSelector: _), .digitizationApprovedWithIDV(digitalCardID: _, idvMethodSelector: _)),
+            (.digitizationApprovedWithIDV(digitalCardID: _, idvMethodSelector: _, service: _), .digitizationApprovedWithIDV(digitalCardID: _, idvMethodSelector: _, service: _)),
             (.activationRequired(pendingActivation: _), .activationRequired(pendingActivation: _)):
             return true
         default:
@@ -23,7 +23,7 @@ public enum EnrollmentState: Equatable {
     case digitization
     case activation
     case termsAndConditions(acceptanceData: TSHPaySDK.CardDigitizationService.EligibilityAcceptableData?)
-    case digitizationApprovedWithIDV(digitalCardID: String, idvMethodSelector: CardDigitizationService.IDVMethodSelector)
+    case digitizationApprovedWithIDV(digitalCardID: String, idvMethodSelector: CardDigitizationService.IDVMethodSelector, service: CardDigitizationService)
     case activationRequired(pendingActivation: CardDigitizationService.PendingCardActivation)
     case waitingForResponse
     

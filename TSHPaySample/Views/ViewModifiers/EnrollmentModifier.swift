@@ -75,7 +75,7 @@ struct EnrollmentModifier: ViewModifier {
                 .cornerRadius(20)
                 .shadow(radius: 20)
                 .scaledToFit()
-            } else if case .digitizationApprovedWithIDV(_, let idvMethodSelector) = appDelegate.currentEnrollmentState, yellowFlowHandler  {
+            } else if case .digitizationApprovedWithIDV(_, let idvMethodSelector, let service) = appDelegate.currentEnrollmentState, yellowFlowHandler  {
                 VStack {
                     Text("Please select authentication method")
                         .foregroundColor(Color.black)
@@ -84,18 +84,20 @@ struct EnrollmentModifier: ViewModifier {
                         .multilineTextAlignment(.center)
                     
                     ForEach(idvMethodSelector.getIDVMethodList(), id: \.self.id) { loopMethod in
-                        Button {
-                            withAnimation {
-                                appDelegate.currentEnrollmentState = .activation
+                        // Sample app scope is currently for Email and SMS only.
+                        if loopMethod.type == .otpByEmail || loopMethod.type == .otpBySMS {
+                            Button {
+                                withAnimation {
+                                    appDelegate.currentEnrollmentState = .activation
+                                }
+                                Task {
+                                    await appDelegate.handlePendingActivation(idvMethodSelector: idvMethodSelector, method: loopMethod, service: service)
+                                }
+                            } label: {
+                                Text(methodDescription(loopMethod))
                             }
-                            Task {
-                                try await idvMethodSelector.select(idvID: loopMethod.id)
-                            }
-                        } label: {
-                            Text(methodDescription(loopMethod))
+                            .padding(10)
                         }
-                        .padding(10)
-                        
                     }
                     .padding(.horizontal)
                     .buttonStyle(.borderless)
@@ -114,6 +116,7 @@ struct EnrollmentModifier: ViewModifier {
                         .multilineTextAlignment(.center)
                     
                     TextField("Verification value", text: $otp)
+                        .keyboardType(.numberPad)
                         .textFieldStyle(.plain)
                         .disableAutocorrection(true)
                         .textContentType(.password)
@@ -131,22 +134,11 @@ struct EnrollmentModifier: ViewModifier {
                                 otp = ""
                             }
                         } label: {
-                            Text("Accept").font(.headline)
+                            Text("Confirm").font(.headline)
                         }
                         .padding()
                         .buttonStyle(.borderedProminent)
-                        
-                        Button {
-                            otp = ""
-                            withAnimation {
-                                appDelegate.currentEnrollmentState = .notStarted
-                            }
-                        } label: {
-                            Text("Reject").font(.headline)
-                        }
-                        .padding()
-                        .buttonStyle(.borderedProminent)
-                        .tint(.red)
+                        .disabled(otp.isEmpty)
                     }
                     
                 }

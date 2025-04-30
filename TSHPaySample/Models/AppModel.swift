@@ -292,6 +292,22 @@ class AppModel: ToastHelper, ObservableObject {
             }
         }
     }
+    
+    public func handlePendingActivation(idvMethodSelector: CardDigitizationService.IDVMethodSelector,
+                                        method: CardDigitizationService.IDVMethod,
+                                        service: CardDigitizationService) async {
+        do {
+            // Pass selected idv method to the SDK and resume the session.
+            let pendingActivationSession = try await idvMethodSelector.select(idvID: method.id)
+            try await pendingActivationSession?.resume()
+            
+            // Handle new event stream with original service. It's important to use the same instance.
+            await handleEnrollmentStream(service, fromAddCardScreen: false)
+
+        } catch {
+            toastShow(caption: "Pending activation error", description: error.localizedDescription, type: .error)
+        }
+    }
         
     // MARK: - Private helpers
     
@@ -309,7 +325,7 @@ class AppModel: ToastHelper, ObservableObject {
             case .digitizationApprovedWithIDV(let digitalCardID, let idvMethodSelector):
                 AppLogger.log(.debug, "\(String(describing: self)) - \(#function)", "Digitization approved with IDV: \(digitalCardID), \(idvMethodSelector)")
                 
-                await enrollmentEndded(differentState: .digitizationApprovedWithIDV(digitalCardID: digitalCardID, idvMethodSelector: idvMethodSelector))
+                await enrollmentEndded(differentState: .digitizationApprovedWithIDV(digitalCardID: digitalCardID, idvMethodSelector: idvMethodSelector, service: service))
                 if fromAddCardScreen {
                     // We will return from the add card page because card was already approved and main screen will ask for the OTP.
                     // Main screen because the card can be activated even from there if needed. We do not want to block user on the enrollment screen.
@@ -323,7 +339,7 @@ class AppModel: ToastHelper, ObservableObject {
                 AppLogger.log(.debug, "\(String(describing: self)) - \(#function)", "Invalid input: \(message)")
                 
                 toastShow(caption: "Enrollment:", description: "Invalid input: \(message)", type: .warning)
-                await enrollmentEndded()
+                await enrollmentEndded(reloadUI: true)
             case .cancelled:
                 AppLogger.log(.debug, "\(String(describing: self)) - \(#function)", "Cancelled")
                 
@@ -333,7 +349,7 @@ class AppModel: ToastHelper, ObservableObject {
                 AppLogger.log(.debug, "\(String(describing: self)) - \(#function)", "Activated by IDV: \(digitalCardID)")
                 
                 toastShow(caption: "Enrollment:", description: "Activated by IDV: \(digitalCardID)", type: .info)
-                await enrollmentEndded()
+                await enrollmentEndded(reloadUI: true)
             case .errorEncountered(let error):
                 AppLogger.log(.debug, "\(String(describing: self)) - \(#function)", "Error encountered: \(error)")
                 
@@ -371,10 +387,13 @@ class AppModel: ToastHelper, ObservableObject {
         return errorMessage
     }
     
-    private func enrollmentEndded(differentState: EnrollmentState = .notStarted) async {
+    private func enrollmentEndded(differentState: EnrollmentState = .notStarted, reloadUI: Bool = false) async {
         await MainActor.run {
             withAnimation {
                 currentEnrollmentState = differentState
+                if reloadUI {
+                    reloadCardList = true
+                }
             }
         }
     }
