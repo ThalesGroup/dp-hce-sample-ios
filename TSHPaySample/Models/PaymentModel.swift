@@ -84,8 +84,8 @@ class PaymentModel: ToastHelper, ObservableObject {
                     toastShow(caption: "ContactlessPayment", description: "authenticationCompleted", type: .info)
                     isPaymentOngoing = true
                     // authentication is success.
-                    try await session.startEmulation()
                     await session.setAlertMessage("Authentication Completed")
+                    try await session.startEmulation()
                     break
                 case .posConnected:
                     // informative: application and show information to end user

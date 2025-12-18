@@ -1,6 +1,6 @@
 {
   "name": "TSHPaySDK-Debug",
-  "version": "7.1.0.rc01",
+  "version": "7.3.0.rc02",
   "homepage": "https://www.thalesgroup.com",
   "description": "TSHPay framework plugin",
   "scripts": {

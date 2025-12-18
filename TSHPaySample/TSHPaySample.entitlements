@@ -10,17 +10,17 @@
 	<true/>
 	<key>com.apple.developer.nfc.hce.iso7816.select-identifier-prefixes</key>
 	<array>
-		<string>325041592E5359532E4444463031</string>
 		<string>A0000007271010</string>
 		<string>D5780000021010</string>
-		<string>A0000000043060</string>
-		<string>A0000000041010</string>
-		<string>A0000001410001</string>
-		<string>A0000000426010</string>
-		<string>A0000000031010</string>
-		<string>A0000007361010</string>
-		<string>A0000000032010</string>
 		<string>925000445D</string>
+		<string>A0000000043060</string>
+		<string>325041592E5359532E4444463031</string>
+		<string>A0000000032010</string>
+		<string>A0000001410001</string>
+		<string>A0000000031010</string>
+		<string>A0000000041010</string>
+		<string>A0000007361010</string>
+		<string>A0000000426010</string>
 	</array>
 </dict>
 </plist>

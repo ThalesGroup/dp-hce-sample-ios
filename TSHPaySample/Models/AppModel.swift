@@ -15,7 +15,6 @@ class AppModel: ToastHelper, ObservableObject {
     }
     
     private var wseState: WalletSecureEnrollmentService.State?
-    private var lastServerMessage: String?
     
     @Published var navPath = NavigationPath()
     @Published var currentEnrollmentState = EnrollmentState.notStarted
@@ -41,10 +40,22 @@ class AppModel: ToastHelper, ObservableObject {
             navPath.removeLast(navPath.count)
         }
     }
-        
+    
     // MARK: - TSHPay methods
-       
-    public func invokeWSEIfNeeded()  {
+    
+    public static func triggerReplenishmentIfNeeded(digitalCard: DigitalCard, forced: Bool = false) async {
+        do {
+            if try await digitalCard.state == .active {
+                let replenishmentService = ReplenishmentService()
+                try await replenishmentService.replenish(digitalCardID: digitalCard.digitalCardID, isForced: forced)
+            }
+        } catch let error {
+            // It is not super critical, we will try to replenish next time. Unless we have 0 keys, it should not be visible for the end user.
+            AppLogger.log(.debug, "\(String(describing: self)) - \(#function)", "Replenishment failed with error: \(error)")
+        }
+    }
+    
+    func invokeWSEIfNeeded()  {
         Task {
             do {
                 let wse = WalletSecureEnrollmentService()
@@ -74,7 +85,7 @@ class AppModel: ToastHelper, ObservableObject {
         }
     }
     
-    public func enrollCard(pan: String, exp: String, cvv: String) {
+    func enrollCard(pan: String, exp: String, cvv: String) {
         // Allow only one enrollment at time.
         guard case .notStarted = currentEnrollmentState else {
             toastShow(caption: "Enrollment warning", description: "Previous enrollment did not finished yet.")
@@ -121,7 +132,7 @@ class AppModel: ToastHelper, ObservableObject {
                 }
                 
                 // Sample application covers only manual entry. Let's create instrumented data from entered values.
-//                let instrumentDataComponent = CardDigitizationService.InstrumentDataComponents(encryptedCardData: encryptedCardInfo)
+                //                let instrumentDataComponent = CardDigitizationService.InstrumentDataComponents(encryptedCardData: encryptedCardInfo)
                 let instrumentDataComponent = CardDigitizationService.InstrumentDataComponents(encryptedCardData: encryptedCardInfo,
                                                                                                publicKeyIdentifier: serverEnvironment.keyIdentifier)
                 
@@ -144,10 +155,10 @@ class AppModel: ToastHelper, ObservableObject {
         }
     }
     
-    public func enrollCard() {
+    func enrollCard() {
         // Try to accept T&C. It will crash if we are in the incorrect state.
         let tnc = currentEnrollmentState.acceptTermsAndConditions()
-            
+        
         Task {
             do {
                 // Token should be already available since it was checked before card eligibility, but it could not harm anything to be sure.
@@ -180,7 +191,7 @@ class AppModel: ToastHelper, ObservableObject {
         }
     }
     
-    public func resumePendingActivation(_ digitalCardID: String) {
+    func resumePendingActivation(_ digitalCardID: String) {
         Task {
             do {
                 let cardEnrollmentService = CardDigitizationService()
@@ -211,7 +222,7 @@ class AppModel: ToastHelper, ObservableObject {
         }
     }
     
-    public func checkContactlessEligibility() {
+    func checkContactlessEligibility() {
         Task {
             var eligible = false
             var eligibilityText = "Device is not eligible for contactless payments."
@@ -237,63 +248,7 @@ class AppModel: ToastHelper, ObservableObject {
         }
     }
     
-    public func processIncomingNotification(_ userInfo: [AnyHashable : Any])  {
-        lastServerMessage = nil
-        
-        Task {
-            do {
-                // Unsupported notification content.. We can ignore this message.
-                guard let userInfo = userInfo as? [String: Any] else {
-                    AppLogger.log(.debug, "\(String(describing: self)) - \(#function)", "Unsupported push notification content.")
-                    return
-                }
-                
-                let notification = NotificationService()
-                try await notification.processNotification(forUserInfo: userInfo)
-                for await state in await notification.notificationEventStream{
-                    switch state {
-                    case .completed:
-                        // Messages depends on the scheme. This is example for MC and PURE
-                        // 1. NotificationService.KnownMessage.requestInstallCard
-                        // 2. NotificationService.KnownMessage.requestResumeCard
-                        
-                        if lastServerMessage == NotificationService.KnownMessage.requestResumeCard.rawValue ||
-                            lastServerMessage == NotificationService.KnownMessage.requestSuspendCard.rawValue ||
-                            lastServerMessage == NotificationService.KnownMessage.requestDeleteCard.rawValue ||
-                            lastServerMessage == NotificationService.KnownMessage.requestResumeCard.rawValue {
-                            await MainActor.run {
-                                withAnimation {
-                                    reloadCardList = true
-                                }
-                            }
-                        }
-                        lastServerMessage = nil
-                    case .unsupportedPushContent(pushMessage: let pushMessage):
-                        AppLogger.log(.debug, "\(String(describing: self)) - \(#function)", "Unsupported push message: \(String(describing: pushMessage))")
-                        break
-                    case .serverMessage(let serverMessage, let digitalcardid):
-                        AppLogger.log(.info, "\(String(describing: self)) - \(#function)", "Server message received. Message: \(String(describing: serverMessage)). digitalcard ID: \(String(describing: digitalcardid))")
-                        
-                        guard let serverMessage = serverMessage else {
-                            AppLogger.log(.debug, "\(String(describing: self)) - \(#function)", "MessageCode is null for some reason")
-                            break
-                        }
-                        lastServerMessage = serverMessage.code
-                    case .errorEncountered(let error, userInfo: _):
-                        AppLogger.log(.debug, "\(String(describing: self)) - \(#function)", "Error encounter: \(error.description)")
-                    @unknown default:
-                        AppLogger.log(.debug, "\(String(describing: self)) - \(#function)", "State not handled.")
-                        break
-                    }
-                }
-            } catch {
-                let errorMessage = getNotificationServiceErrorMessage(error: error)
-                AppLogger.log(.debug, "\(String(describing: self)) - \(#function)", "Catch an error: \(errorMessage)")
-            }
-        }
-    }
-    
-    public func handlePendingActivation(idvMethodSelector: CardDigitizationService.IDVMethodSelector,
+    func handlePendingActivation(idvMethodSelector: CardDigitizationService.IDVMethodSelector,
                                         method: CardDigitizationService.IDVMethod,
                                         service: CardDigitizationService) async {
         do {
@@ -306,6 +261,102 @@ class AppModel: ToastHelper, ObservableObject {
 
         } catch {
             toastShow(caption: "Pending activation error", description: error.localizedDescription, type: .error)
+        }
+    }
+        
+    @MainActor
+    func processNotificationCPS(_ userInfo: [AnyHashable : Any]) async {
+        do {
+            // Unsupported notification content.. We can ignore this message.
+            guard let userInfo = userInfo as? [String: Any] else {
+                AppLogger.log(.debug, "\(String(describing: self)) - \(#function)", "Unsupported push notification content.")
+                return
+            }
+            
+            var serverMessages = [] as [String]
+            
+            let notification = NotificationService()
+            try await notification.processNotification(forUserInfo: userInfo)
+            for await state in await notification.notificationEventStream{
+                switch state {
+                case .completed:
+                    // Messages depends on the scheme. This is example for MC and PURE
+                    // 1. NotificationService.KnownMessage.requestInstallCard
+                    // 2. NotificationService.KnownMessage.requestResumeCard
+                                
+                    if serverMessages.contains(NotificationService.KnownMessage.requestResumeCard.rawValue) ||
+                        serverMessages.contains(NotificationService.KnownMessage.requestSuspendCard.rawValue) ||
+                        serverMessages.contains(NotificationService.KnownMessage.requestDeleteCard.rawValue) ||
+                        serverMessages.contains(NotificationService.KnownMessage.requestResumeCard.rawValue) {
+                        await MainActor.run {
+                            withAnimation {
+                                reloadCardList = true
+                            }
+                        }
+                    }
+                case .unsupportedPushContent(pushMessage: let pushMessage):
+                    AppLogger.log(.debug, "\(String(describing: self)) - \(#function)", "Unsupported push message: \(String(describing: pushMessage))")
+                    break
+                case .serverMessage(let serverMessage, let digitalcardid):
+                    AppLogger.log(.info, "\(String(describing: self)) - \(#function)", "Server message received. Message: \(String(describing: serverMessage)). digitalcard ID: \(String(describing: digitalcardid))")
+                    
+                    guard let serverMessage = serverMessage else {
+                        AppLogger.log(.debug, "\(String(describing: self)) - \(#function)", "MessageCode is null for some reason")
+                        break
+                    }
+                    if let messageCode = serverMessage.code {
+                        serverMessages.append(messageCode)
+                    }
+                case .errorEncountered(let error, userInfo: _):
+                    AppLogger.log(.debug, "\(String(describing: self)) - \(#function)", "Error encounter: \(error.description)")
+                @unknown default:
+                    AppLogger.log(.debug, "\(String(describing: self)) - \(#function)", "State not handled.")
+                    break
+                }
+            }
+        } catch {
+            let errorMessage = getNotificationServiceErrorMessage(error: error)
+            AppLogger.log(.debug, "\(String(describing: self)) - \(#function)", "Catch an error: \(errorMessage)")
+        }
+    }
+    
+    func processNotificationMG(action: String?, cardId: String?) async {
+        // Check expected action and card id presence.
+        guard "MG:ReplenishmentNeededNotification" == action, let cardId = cardId else {
+            AppLogger.log(.debug, "\(String(describing: self)) - \(#function)", "MG notification does not contain expected fields.")
+            return
+        }
+        
+        // Check if we have selected card actually enrolled.
+        if let digitalCard = await DigitalCardManager().digitalCard(forID: cardId)  {
+            await AppModel.triggerReplenishmentIfNeeded(digitalCard: digitalCard, forced: true)
+        } else {
+            AppLogger.log(.debug, "\(String(describing: self)) - \(#function)", "Card id \(cardId) is not locally enrolled.")
+        }
+    }
+    
+    func processNotificationTNS(action: String?, cardId: String?, recodType: String?) async {
+        // Check expected action and card id presence.
+        guard "TNS:PaymentTransactionNotification" == action, let cardId = cardId else {
+            AppLogger.log(.debug, "\(String(describing: self)) - \(#function)", "Transaction notification does not contain expected fields.")
+            return
+        }
+
+        let historyService = TransactionHistoryService()
+        do {
+            let records = try await historyService.records(forDigitalCardID: cardId, transactionRecordType: recodType)
+            for record in records {
+                // Currently not in the scope of the sample app.
+                // Actual application would need some actual UI to display transaction history properly.
+                let description = "Type: \(String(describing: record.type)), Amount: \(record.displayAmount ?? "N/A"), Status: \(String(describing: record.status))"
+                toastShow(caption: "Transaction notification:", description: "description", type: .info)
+            }
+        } catch {
+            if let error = error as? TransactionHistoryService.Error {
+                AppLogger.log(.debug, "\(String(describing: self)) - \(#function)", "Error encountered: \(error)")
+                
+                toastShow(caption: "Enrollment:", description: "Error encountered: \(error.localizedDescription)", type: .error)
+            }
         }
     }
         

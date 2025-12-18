@@ -49,20 +49,9 @@ class CardListModel: ObservableObject {
                 }
                 
                 // Check for replenishment.
-                await triggerReplenishmentIfNeeded(digitalCard: loopNewCard)
+                await AppModel.triggerReplenishmentIfNeeded(digitalCard: loopNewCard)
             }
         }
     }
     
-    public func triggerReplenishmentIfNeeded(digitalCard: DigitalCard) async {
-        do {
-            if try await digitalCard.state == .active {
-                let replenishmentService = ReplenishmentService()
-                try await replenishmentService.replenish(digitalCardID: digitalCard.digitalCardID)
-            }
-        } catch let error {
-            // It is not super critical, we will try to replenish next time. Unless we have 0 keys, it should not be visible for the end user.
-            AppLogger.log(.debug, "\(String(describing: self)) - \(#function)", "Replenishment failed with error: \(error)")
-        }
-    }
 }

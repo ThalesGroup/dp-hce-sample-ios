@@ -134,6 +134,17 @@
     "Suspended" : {
 
     },
+    "Try Face ID Again" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tutu nunu fufu"
+          }
+        }
+      }
+    },
     "VALID THRU" : {
       "localizations" : {
         "en" : {

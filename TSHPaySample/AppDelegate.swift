@@ -22,8 +22,35 @@ class AppDelegate: AppModel, UIApplicationDelegate, UNUserNotificationCenterDele
                      didReceiveRemoteNotification userInfo: [AnyHashable : Any],
                      fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         
+        // Read optional values used by NFC Wallet notifications.
+        let sender = userInfo["sender"] as? String
+        let action = userInfo["action"] as? String
+        let cardId = userInfo["digitalCardID"] as? String
+        let recordType = userInfo["transactionRecordType"] as? String
+
+        Task {
+            switch sender {
+            case "CPS":
+                // All card related operations like result of replenishment, aynchronous enrollment or life cycle management.
+                // Data should be passed to the NotificationService().processNotification(forUserInfo: userInfo)
+                await processNotificationCPS(userInfo)
+                
+            case "MG":
+                // TSP could request forced replenishment (Replacing the whole set of keys with fresh one).
+                // Method will check action + card id presence and trigger SDK API ReplenishmentService().replenish(digitalCardID: cardId, isForced: true)
+                await processNotificationMG(action: action, cardId: cardId)
+                
+            case "TNS":
+                // Transaction history for the given card and record type.
+                // Method will check action + card id and trigger TransactionHistoryService().records(forDigitalCardID: cardId, transactionRecordType: recordType)
+                await processNotificationTNS(action: action, cardId: cardId, recodType: recordType)
+                
+            default:
+                // Non-SDK notifications. Application should handle other notifications here.
+                break
+            }
+        }
         
-        processIncomingNotification(userInfo)
         completionHandler(.newData)
     }
         
@@ -49,9 +76,10 @@ class AppDelegate: AppModel, UIApplicationDelegate, UNUserNotificationCenterDele
                         await TSHPay.shared.setTeamID(serverEnvironment.simulatorTeamId)
                     }
                 #endif
-                                        
+                    
+                    
                     // Init SDK authentication method that use authentication by Touch ID for any enrolled fingerprints, or Face ID.
-                    try await TSHPay.shared.configure(withVerificationMethod: .biometricOnly, plistConfiguration: .custom(named:serverEnvironment.getConfigPlistName()))
+                    try await TSHPay.shared.configure(withVerificationMethod: .userPresence, plistConfiguration: .custom(named:serverEnvironment.getConfigPlistName()))
                     
                     // Try to perfrom wallet secure enrollment. Pre-requirement for any cryptographic operations.
                     invokeWSEIfNeeded()
